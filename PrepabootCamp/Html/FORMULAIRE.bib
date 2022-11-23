@@ -1,0 +1,214 @@
+Les formulaires sont une autre partie essentielle du HTML et seront beaucoup utilisés lorsque nous arriverons à la programmation côté serveur. Nous utilisons des formulaires pour transmettre des données à d'autres pages et serveurs.
+
+En eux-mêmes, les formulaires ne sont généralement pas particulièrement utiles. Ils ont tendance à être utilisés en conjonction avec un langage de programmation pour traiter les informations saisies par l'utilisateur .
+
+Depuis MDN :
+
+Les formulaires HTML sont l'un des principaux points d'interaction entre un utilisateur et un site Web ou une application. Ils permettent aux utilisateurs d'envoyer des données au site Web. La plupart du temps, ces données sont envoyées au serveur Web, mais la page Web peut également les intercepter pour les utiliser seules.
+
+Un formulaire HTML est composé d'un ou plusieurs widgets. Ces widgets peuvent être des champs de texte (sur une ou plusieurs lignes), des cases à cocher, des boutons, des cases à cocher ou des boutons radio. La plupart du temps, ces widgets sont associés à une étiquette qui décrit leur objectif.
+Les balises de base utilisées dans le HTML réel des formulaires sont form, input, textareaet select.option
+
+Formulaire
+formdéfinit le formulaire permettant à un utilisateur de soumettre des informations, un actionattribut est nécessaire pour indiquer au formulaire où son contenu sera envoyé.
+
+L' methodattribut indique au formulaire comment les données vont être envoyées : il peut avoir la valeur get, qui est la valeur par défaut, et verrouille les informations du formulaire sur une adresse Web, ou post, qui envoie (essentiellement) de manière invisible les informations du formulaire.
+
+getest utilisé pour des morceaux plus courts d'informations non sensibles - vous pouvez voir les informations que vous avez soumises dans la recherche d'un site Web apparaître dans l'adresse Web de sa page de résultats de recherche, par exemple.
+
+postest utilisé pour des soumissions plus longues et plus sécurisées, comme dans les formulaires de contact.
+
+Ainsi, un formélément ressemblera à ceci :
+
+<form action="processingscript.php" method="post">
+
+</form>
+
+
+Nous utiliserons #comme valeur de cet actionattribut pour signifier que le formulaire ne doit aller nulle part
+
+
+
+<form action="#" method="get">
+
+</form>
+Saisir
+La inputbalise peut prendre une multitude de formes, dont les plus courantes sont décrites ci-dessous :
+
+<input type="text">ou est simplement <input>une zone de texte standard. Cela peut également avoir un valueattribut, qui définit le texte initial dans la zone de texte.
+
+<input type="password">est similaire à la zone de texte, mais les caractères saisis par l'utilisateur seront masqués.
+
+<input type="checkbox">est une case à cocher, qui peut être activée ou désactivée par l'utilisateur. Cela peut également avoir un checkedattribut ( <input type="checkbox" checked>- l'attribut ne nécessite pas de valeur), qui spécifie qu'un <input>élément doit être présélectionné (coché) lors du chargement de la page.
+
+<input type="radio">est similaire à une case à cocher, mais l'utilisateur ne peut sélectionner qu'un seul bouton radio dans un groupe . Cela peut aussi avoir un checkedattribut.
+
+<input type="submit">est un bouton qui, une fois sélectionné, soumettra le formulaire. Vous pouvez contrôler le texte qui apparaît sur le bouton d'envoi avec l' valueattribut, par exemple <input type="submit" value="Click here">.
+Notez que, comme imget brbalises, la inputbalise, qui n'entoure aucun contenu, ne nécessite pas de balise fermante .
+
+Zone De Texte
+textareaest, en gros, une grande zone de texte multiligne.
+Le nombre prévu de lignes et de colonnes peut être défini avec les attributs rowset cols, bien que vous puissiez modifier la taille à votre guise à l'aide de CSS.
+
+Une zone de texte peut contenir un nombre illimité de caractères et le texte s'affiche dans une police à largeur fixe (généralement Courier).
+
+<textarea rows="5" cols="20">A big load of text</textarea>
+
+Tout texte que vous choisissez de placer entre les balises d'ouverture et de fermeture (dans ce cas "une grosse charge de texte") formera la valeur initiale de la zone de texte.
+
+Sélectionner
+La selectbalise fonctionne avec la optionbalise pour créer des zones de sélection déroulantes .
+
+<select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option value="third option">Option 3</option>
+</select>
+
+
+Lorsque le formulaire est soumis, la valeur de l'option sélectionnée sera envoyée. Cette valeur sera le texte entre la balise d'option d'ouverture et de fermeture sélectionnée, sauf si une valeur explicite est spécifiée avec l' valueattribut, auquel cas elle sera envoyée à la place.
+
+Ainsi, dans l'exemple ci-dessus, si le premier élément est sélectionné, la valeur "Option 1" sera envoyée, si le troisième élément est sélectionné, la valeur "troisième option" sera envoyée.
+
+Semblable à l'attribut coché des cases à cocher et des boutons radio, une balise d'option peut également avoir un selectedattribut, pour commencer avec l'un des éléments déjà sélectionnés, par exemple. <option selected>Cat</option>présélectionnerait "Chat" parmi les éléments.
+
+Nom
+Toutes les balises mentionnées ci-dessus seront très bien présentées sur la page, mais si vous connectez votre formulaire à un script de gestion de formulaire, elles seront toutes ignorées. C'est parce que les champs du formulaire ont besoin de noms .
+
+Ainsi, à tous les champs, l'attribut namedoit être ajouté, par exemple <input type="text" name="username">.
+
+Comme le dit MDN, les formulaires doivent avoir des widgets (ou des entrées) qui peuvent être associés à une étiquette pour décrire leur objectif.
+Qu'est-ce que cela signifie exactement? Examinons cet exemple de formulaire :
+
+Remarque : ce formulaire ne fonctionnera que s'il existe un fichier, indiqué dans l' actionattribut de la balise de formulaire, pour gérer les données soumises.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Jusqu'à présent, nous utilisons toutes les balises qui ont l'ouverture puis la fermeture qui a cette barre oblique
+
+dedans.
+
+Maintenant, il y a quelques éléments qui n'ont pas cette syntaxe mais ils ont quelque chose appelé 'auto-fermeture
+
+Mots clés'.
+
+Alors disons ici entre Fuji et Honeycrisp que je veux avoir un peu de saut de ligne.
+
+Je peux utiliser quelque chose comme 'br' ici et si je l'enregistre et que je 'rafraîchis',
+
+nous avons un petit saut de ligne.
+
+Il y a aussi 'hr' qui est une ligne horizontale,
+
+vous obtenez donc une ligne horizontale pour le rafraîchissement jusqu'ici.
+
+Les balises 'hr' n'ont qu'un seul élément, à fermeture automatique.
+
+Vous pouvez également voir quelque chose comme ça, et c'est quelque chose de l'ancienne version de HTML, qui
+
+utilise xHTML.
+
+Vous pouvez en savoir plus par vous-même, mais gardez à l'esprit qu'avec HTML5, nous allons juste
+
+utiliser cela.
+
+Donc, évidemment, sur les pages Web, il y aura des images.
+
+Ce serait bien s'il y avait une photo d'une pomme Fuji ici.
+
+Voyons comment nous pouvons le faire.
+
+Donc, avec une balise d'image, et réfléchissons à cela de manière critique si je ne savais pas ce qu'est une balise d'image et
+
+Je voulais ajouter une image à mon petit fichier, eh bien si je Google "balise HTML d'image", encore une fois l'un des
+
+Les premiers sites Web qui apparaissent sont les écoles W3, et je vais vous montrer exactement comment fonctionne une balise d'image.
+
+Si je clique sur essayez vous-même, vous pouvez le voir en action, vous pouvez jouer avec, mais vous pouvez voir ici que
+
+une balise d'image est une balise à fermeture automatique.
+
+Il n'y a pas de balises d'image fermantes, juste une seule balise.
+
+Et si je fais image [img] et que nous avons quelque chose appelé source ici et c'est quelque chose appelé un attribut
+
+certaines balises HTML peuvent avoir quelque chose appelé des attributs, qui ajoutent des propriétés spéciales à la spécificité
+
+étiquette.
+
+Ainsi, un attribut a toujours une valeur qui lui est attachée et la source de l'image [img src].
+
+C'est ce qu'il représente, il nous dit d'où vient l'image.
+
+Alors trouvons une image de pomme fuji allons-y, images, oh, j'aime bien celle-ci. Faisons 'voir l'image' et donnons-nous le lien
+
+de l'endroit où se trouve cette image.
+
+Donc je vais juste copier ça coller ici.
+
+Revenons à notre exemple ici, nous pouvons voir ici qu'il y a quelques attributs supplémentaires que nous pouvons ajouter
+
+à une balise d'image.
+
+Mais pour l'instant, nous pouvons simplement le laisser ici fermer la balise.
+
+Vous pouvez voir que Sublime Text a la belle mise en évidence pour nous et si je sauvegarde cela, retournez sur notre site Web
+
+et je clique sur actualiser, j'obtiens cette énorme pomme fuji, et évidemment c'est trop gros.
+
+Idéalement, nous pouvons le rendre un peu plus petit si nous revenons à l'exemple, vous verrez qu'il
+
+a une largeur et une hauteur afin que nous puissions simplement copier cela et l'ajouter aux attributs afin que nous spécifions
+
+la largeur.
+
+Et c'est en pixels [px].
+
+Alors je garde ça, je rafraîchis et regarde qu'on a la pomme fuji, ça a l'air très très joli.
+
+Ajoutons également l'image pour Honeycrisp.
+
+Je vais faire ça rapidement.
+
+Vous devriez pouvoir simplement copier cette image.
+
+Et encore une fois, nous voulons lui donner la même taille que le précédent, donc je vais laisser la largeur et la hauteur
+
+le même.
+
+Et trouvons une - une image d'une pomme Honeycrisp.
+
+Alors, 'honeycrisp apple' et 'Images', ça se ressemble pas mal non ?
+
+Et "voir l'image", copions la source à partir d'ici pour la sauvegarder.
+
+Revenez à notre site Web et rafraîchissons-nous et regardons cela.
+
+Nous avons nos pommes. Ainsi, les balises d'image sont très très utiles.
+
+Vous vous demandez peut-être, "que signifie l'attribut 'alt'?"
+
+Et c'est quelque chose que vous pouvez réellement lire, donc si vous faites défiler vers le bas si vous regardez ici, vous
+
+peut voir que 'alt' spécifie un texte alternatif pour une image.
+
+Donc, encore une fois, c'est quelque chose qui peut être utilisé par les lecteurs d'écran et vous pouvez définir de quoi est l'image.
+
+Donc, ici, le "alt" est "smiley face".
+
+Ainsi, lorsqu'un lecteur d'écran le lit, il dit: "Oh et cette partie du site Web, il y a un visage souriant".
+
+Pour récapituler, nous avons découvert les balises à fermeture automatique, qui ne nécessitent pas
+
+deux d'entre eux, donc une balise d'ouverture et de fermeture.
+
+Juste un seul.
+
+Nous utilisons donc 'br' pour le saut de ligne.
+
+Nous avons utilisé 'hr' pour une ligne horizontale, puis nous avons la balise d'image qui doit également avoir certains attributs.
+
+Donc, il a une source qui nous dit d'où récupérer l'image,
+
+il a un attribut width, un attribut height, avec une valeur de 42 pixels et 42.
+
+D'accord, je vous verrai dans la prochaine leçon
