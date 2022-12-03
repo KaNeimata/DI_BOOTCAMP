@@ -1,0 +1,155 @@
+
+.case{
+	background-color: #fff;
+	border-radius: 10px;
+    border-color: black;
+    width: 100%;
+    border: 3px solid rgb(214, 115, 169); 
+    
+    
+}
+
+
+.header-case{
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
+    /* margin-left: 10px; */
+    color: black;
+    background: rgb(248, 162, 229);
+
+}
+
+.head
+{
+    
+    padding-left: 20px;
+    margin-top: 20px;
+    /* width: 40%; */
+    /* background: #000; */
+}
+.user-wrapp img{
+	border-radius: 50%;
+	margin-right: 5rem;
+    margin-left: 3rem;
+}
+.nom
+{
+    text-align: center;
+}
+
+
+   table {
+    /* border: 1px solid black; */
+    display: flex;
+
+    width: 100%;
+    position: relative;
+    
+  }
+ 
+.form
+{
+    margin-left: 50px;
+   
+}
+.form1
+{
+ margin-left: 50px;
+   
+}
+/* .bord
+{
+    border: 2px rgb(248, 162, 229);;
+} */
+.date
+{
+    color: rgb(99, 99, 248);
+}
+
+.tabler {
+    justify-content: center;
+}
+.date input{
+    border: 2px;
+    /* background: red; */
+}
+.bar1 input{
+    width:75%;
+    height: 5;
+    /* border-color: blue; */
+    background-color: rgb(99, 99, 248);
+    /* color: red; */
+    
+}
+.bar1  {
+    width:100%;
+    height: 5;
+    /* border-color: blue; */
+    background-color: gray;
+    /* color: red; */
+    
+}
+.bar2 {
+    width:100%;
+    height: 5;
+    /* border-color: blue; */
+    background-color: gray;
+    /* color: red; */
+    
+}
+.bar3
+  {
+    width:100%;
+    height: 5;
+    /* border-color: blue; */
+    background-color: gray;
+    /* color: red; */
+    
+}
+.bar2 input{
+    width:25%;
+    height: 5;
+    /* border-color: blue; */
+    background-color: rgb(99, 99, 248);
+    /* color: red; */
+    
+}
+.bar3 input{
+    width:15%;
+    height: 5;
+    /* border-color: blue; */
+    background-color: rgb(99, 99, 248);
+    /* color: red; */
+    
+}
+.bar4
+  {
+    width:100%;
+    height: 5;
+    background-color: gray;
+    
+}
+.bar4 input{
+    width:80%;
+    height: 5;
+    /* border-color: blue; */
+    background-color: rgb(99, 99, 248);
+    /* color: red; */
+    
+}
+.bar5
+  {
+    width:100%;
+    height: 5;
+    background-color: gray;
+    
+}
+.bar5 input{
+    width:60%;
+    height: 5;
+    /* border-color: blue; */
+    background-color:rgb(99, 99, 248);
+    /* color: red; */
+    
+}
